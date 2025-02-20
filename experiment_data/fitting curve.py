@@ -8,6 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
+plt.rc('font',family='Times New Roman',size='20',weight='bold') 
+
 Y = np.array([1,    0.5,   0.2,  0.1,  0.05,    0.01, 0]) #gray value
 X = np.array([7.96, 18.82, 52.4, 85.8, 153.3,  208.2, 255]) #concentration value
 
@@ -27,11 +29,12 @@ params, _ = curve_fit(decreasing_power_func, X_positive, Y_positive)
 fitted_Y = decreasing_power_func(X_positive, *params)
 
 # Plotting
-plt.scatter(X, Y, label='Data', color='blue', marker='o')
+plt.scatter(X, Y, label='Experiment data', color='blue', marker='o')
 plt.plot(X_positive, fitted_Y, label='Fitted Curve', color='red')
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('Decreasing Power Function Fit')
+plt.yticks([0.0,0.5,1.0])
+plt.xlabel(r'$\alpha$')
+plt.ylabel(r'$C$')
+
 plt.legend()
 plt.grid(False)
 plt.show()
@@ -39,43 +42,3 @@ plt.show()
 # Print parameters
 a, b,c = params
 print(f"Fitted parameters: a = {a}, b = {b}, c = {c}")
-
-def decreasing_power_func(x):
-    a, b,c = params
-
-    return a * (x ** -b)-c
-
-# Get fitted parameters
-a, b, c = params
-
-plt.rc('font',family='Times New Roman',size='20',weight='bold') 
-# Calculate log(Y + c) and log(X)
-log_Y_plus_c = np.log(Y_positive + c)
-log_X = np.log(X_positive)
-
-# Plotting log(Y + c) vs. log(X) label='Data (log(Y + c) vs. log(X))',
-plt.scatter(log_X, log_Y_plus_c,  color='blue', marker='o', s=20)  # Adjust 's' for marker size
-
-# Perform linear regression on log(Y + c) vs. log(X)
-slope, intercept = np.polyfit(log_X, log_Y_plus_c, 1)
-fitted_log_Y = slope * log_X + intercept
-
-plt.plot(log_X, fitted_log_Y, label='Fitted Line', color='red')
-plt.xlabel('log(Gray)', size=20, weight='bold')
-plt.ylabel('log(C + c)', size=20, weight='bold')
-# Annotate the slope and intercept on the plot
-plt.text(0.5, 0.9, f'Slope: {slope:.4f}', fontsize=20, transform=plt.gca().transAxes, color='black')
-plt.text(0.5, 0.8, f'Intercept: {intercept:.4f}', fontsize=20, transform=plt.gca().transAxes, color='black')
-#plt.title('Relationship between log(X) and log(Y + c)')
-#plt.legend()
-plt.grid(False)
-# Add thicker borders to the plot
-ax = plt.gca()
-ax.spines['top'].set_linewidth(2)
-ax.spines['right'].set_linewidth(2)
-ax.spines['bottom'].set_linewidth(2)
-ax.spines['left'].set_linewidth(2)
-plt.show()
-
-# Print linear regression parameters
-print(f"Linear regression parameters: slope = {slope}, intercept = {intercept}")
