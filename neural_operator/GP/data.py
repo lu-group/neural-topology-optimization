@@ -38,7 +38,7 @@ def dataset(pro):
               X_branch.append([gen_data(i,j)[0]])
               X_trunk.append([gen_data(i,j)[1]])
               Y.append([gen_data(i,j)[2]])
-       for j in [2001,2002,2003]: 
+       for j in [1001,1002,1003]: 
             for i in [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]:          
               X_branch.append([gen_data(i,j)[0]])
               X_trunk.append([gen_data(i,j)[1]])
