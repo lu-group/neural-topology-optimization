@@ -7,7 +7,7 @@ import pandas as pd
 
 def gen_data(i,j):
     ### i means index of inlet velocities; j means index of different topology structure   
-    filename = "data/v"+str(i)+"N"+str(j)+".csv"
+    filename = "dataset/v"+str(i)+"N"+str(j)+".csv"
 
     df=pd.DataFrame(pd.read_csv(filename))
     df.columns = df.columns.str.replace(' ', '')    
