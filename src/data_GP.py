@@ -5,7 +5,7 @@ import pandas as pd
 # device = torch.device("cuda")
 def gen_data(i,j):
     
-    filename = "data/v"+str(i)+"N"+str(j)+".csv"
+    filename = "dataset/v"+str(i)+"N"+str(j)+".csv"
 
     df=pd.DataFrame(pd.read_csv(filename))
     df.columns = df.columns.str.replace(' ', '')    
