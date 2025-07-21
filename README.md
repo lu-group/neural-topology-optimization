@@ -1,30 +1,29 @@
 > Under Construction
 
-# neural-topology-optimization for efficient channel design
+# Neural Topology Optimization Via Active Learning for Efficient Channel Design in Turbulent Mass Transfer
+
+The data and code for the paper [C. Kou, Y. Yin, M. Zhu, S. Jia, Y. Luo, X. Yuan, L. Lu. Neural Topology Optimization Via Active Learning for Efficient Channel Design in Turbulent Mass Transfer, *Advanced Science*, 2025](https://doi.org/10.1002/advs.202508386).
 
 ## Data
-
-The training dataset of neural operators an be downloaded via shared folder [https://drive.google.com/drive/folders/1rOqFQoMn4nR6CvQsGryxRcJPB5d0tgaD?usp=sharing](https://drive.google.com/drive/folders/1rOqFQoMn4nR6CvQsGryxRcJPB5d0tgaD?usp=drive_link).
-
+The training dataset of neural operators can be downloaded via [OneDrive](https://yaleedu-my.sharepoint.com/:f:/g/personal/lu_lu_yale_edu/EusjK0hAu0xJoLTxnrgafIkBSrjlbAd8h2tK_HB7b401nw?e=Zrcuzj).
 
 ## Code
 
-1. [Data generation](data_generation): Compile [UDF.c](data_generation/UDF.c) and run [fluent.cas](data_generation/fluent.cas) to generate the dataset.
-2. [Neural operators](neural_operator): Run the [train_GC.py](neural_operator/GC/train_GC.py) and [train_GP.py](neural_operator/GP/train_GP.py) to train the neural operators.
-3. Run the [main.py](main.py) to perform neural topology optimization.
+- Compile [UDF.c](data_generation/UDF.c) and run [fluent.cas](data_generation/fluent.cas) to generate the dataset.
+- Run the [train_GC.py](neural_operator/GC/train_GC.py) and [train_GP.py](neural_operator/GP/train_GP.py) to train the neural operators.
+- Run the [main.py](main.py) to perform neural topology optimization using the pretrained nueral operators.
 
 ## Cite this work
 
 If you use this data or code for academic research, you are encouraged to cite the following paper:
 ```
 @article{https://doi.org/10.1002/advs.202508386,
-author = {Kou, Chenhui and Yin, Yuhui and Zhu, Min and Jia, Shengkun and Luo, Yiqing and Yuan, Xigang and Lu, Lu},
-title = {Neural Topology Optimization Via Active Learning for Efficient Channel Design in Turbulent Mass Transfer},
-journal = {Advanced Science},
-pages  ={e08386},
-keywords  ={computational fluid dynamics, active learning, mass transfer enhancement, neural operator, neural topology, topology optimization},
-doi  ={https://doi.org/10.1002/advs.202508386},
-url  ={https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202508386},
+author  ={Kou, Chenhui and Yin, Yuhui and Zhu, Min and Jia, Shengkun and Luo, Yiqing and Yuan, Xigang and Lu, Lu},
+title   ={Neural Topology Optimization Via Active Learning for Efficient Channel Design in Turbulent Mass Transfer},
+journal ={Advanced Science},
+pages   ={e08386},
+doi     ={https://doi.org/10.1002/advs.202508386},
+url     ={https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202508386},
 eprint  ={https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/advs.202508386}
 }
 ```
