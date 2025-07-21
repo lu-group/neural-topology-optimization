@@ -10,9 +10,9 @@ The data and code for the paper [C. Kou, Y. Yin, M. Zhu, S. Jia, Y. Luo, X. Yuan
 
 ## Code
 
-
-- Run the [train_GC.py](neural_operator/GC/train_GC.py) and [train_GP.py](neural_operator/GP/train_GP.py) to train the neural operators.
-- Run the [main.py](main.py) to perform neural topology optimization using the pretrained nueral operators.
+All code are in the folder [src](src).
+- Run the [train_GC.py](src/train_GC.py) and [train_GP.py](src/train_GP.py) to train the neural operators.
+- Run the [main.py](src/main.py) to perform neural topology optimization using the pretrained nueral operators.
 
 ## Cite this work
 
