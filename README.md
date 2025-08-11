@@ -19,13 +19,13 @@ All code are in the folder [src](src).
 If you use this data or code for academic research, you are encouraged to cite the following paper:
 ```
 @article{https://doi.org/10.1002/advs.202508386,
-author  ={Kou, Chenhui and Yin, Yuhui and Zhu, Min and Jia, Shengkun and Luo, Yiqing and Yuan, Xigang and Lu, Lu},
-title   ={Neural Topology Optimization Via Active Learning for Efficient Channel Design in Turbulent Mass Transfer},
-journal ={Advanced Science},
-volume  ={}
-pages   ={e08386},
-year    ={}
-doi     ={https://doi.org/10.1002/advs.202508386}
+  author  ={Kou, Chenhui and Yin, Yuhui and Zhu, Min and Jia, Shengkun and Luo, Yiqing and Yuan, Xigang and Lu, Lu},
+  title   ={Neural Topology Optimization Via Active Learning for Efficient Channel Design in Turbulent Mass Transfer},
+  journal ={Advanced Science},
+  volume  ={}
+  pages   ={e08386},
+  year    ={}
+  doi     ={https://doi.org/10.1002/advs.202508386}
 }
 ```
 
