@@ -22,9 +22,9 @@ If you use this data or code for academic research, you are encouraged to cite t
   author  = {Kou, Chenhui and Yin, Yuhui and Zhu, Min and Jia, Shengkun and Luo, Yiqing and Yuan, Xigang and Lu, Lu},
   title   = {Neural Topology Optimization Via Active Learning for Efficient Channel Design in Turbulent Mass Transfer},
   journal = {Advanced Science},
-  volume  = {}
+  volume  = {},
   pages   = {e08386},
-  year    = {2025}
+  year    = {2025},
   doi     = {https://doi.org/10.1002/advs.202508386}
 }
 ```
